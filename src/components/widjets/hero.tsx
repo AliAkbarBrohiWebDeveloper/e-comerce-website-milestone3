@@ -8,19 +8,19 @@ import Link from 'next/link';
 
 const AirMax = [
   {
-    id: 33,
+    id: 36,
     src: "/h2.png",
     header: "Nike Air Max Pulse",
     para: "Women's Shoes"
   },
   {
-    id: 34,
+    id: 37,
     src: "/h3.png",
     header: "Nike Air Max Pulse",
     para: "Men's Shoes"
   },
   {
-    id: 35,
+    id: 38,
     src: "/h4.png",
     header: "Nike Air Max 97 SE",
     para: "Men's Shoes"
@@ -66,7 +66,7 @@ const Hero = () => {
           AirMax.map((item) => {
             return (
               <div key={item.id} className='text-center'>
-                <Link href={`products/${item.id}`}> 
+                <Link href={`/Products/${item.id}`}> 
                   <Image src={item.src} alt='' height={441} width={441} className='mx-auto' />
                 </Link>
                 <h3 className='mt-4 text-lg font-semibold'>{item.header}</h3>

@@ -1,222 +1,25 @@
 
-
-// "use client"
-// import React from 'react'
-// import { useSelector, useDispatch } from 'react-redux'
-// import { removeItem, increaseQuantity, decreaseQuantity } from '@/app/(add to cart)/Redux/cartslice'; 
-// import Image from 'next/image';
-// import cartImage from "/public/cart.jpg"
-
-// function Cart() {
-//   const cartitems = useSelector((state: any) => state.cart.items || []); 
-//   const dispatch = useDispatch(); 
-
-//   const handleRemove = (id: number) => {
-//     dispatch(removeItem(id));
-//   };
-
-//   const handleIncrease = (id: number) => {
-//     dispatch(increaseQuantity(id));
-//   };
-
-//   const handleDecrease = (id: number) => {
-//     dispatch(decreaseQuantity(id));
-//   };
-
-//   return (
-//     <div className="max-w-6xl mx-auto p-4">
-//       <h1 className="text-3xl font-semibold text-center mb-6">Your Cart</h1>
-      
-//       {cartitems.length > 0 ? (
-//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-//           {cartitems.map((item: any) => {
-//             const totalPrice = item.price * item.quantity; 
-//             return (
-//               <div key={item.id} className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-                
-              
-//                 <div className="w-full h-60 flex justify-center items-center mb-4">
-//                   <Image className="object-contain max-h-full" src={item.image} alt={item.title} height={500} width={500}/>
-//                 </div>
-
-              
-//                 <div className="text-center mb-4">
-//                   <h5 className="text-xl font-medium text-gray-800">{item.title}</h5>
-//                   <h5 className="text-lg text-gray-600">${item.price} x {item.quantity} = ${totalPrice}</h5>
-//                 </div>
-
-             
-//                 <div className="flex items-center mb-4">
-//                   <button
-//                     onClick={() => handleDecrease(item.id)}
-//                     className="px-3 py-1 bg-gray-300 text-black rounded-md hover:bg-gray-400 focus:outline-none"
-//                   >
-//                     -
-//                   </button>
-//                   <span className="mx-4 text-lg">{item.quantity}</span>
-//                   <button
-//                     onClick={() => handleIncrease(item.id)}
-//                     className="px-3 py-1 bg-gray-300 text-black rounded-md hover:bg-gray-400 focus:outline-none"
-//                   >
-//                     +
-//                   </button>
-//                 </div>
-
-              
-//                 <button 
-//                   onClick={() => handleRemove(item.id)} 
-//                   className="mt-4 px-6 py-2 bg-red-500 text-white rounded-full text-sm font-semibold hover:bg-red-700 focus:outline-none transition-all duration-200">
-//                   Remove
-//                 </button>
-//               </div>
-//             );
-//           })}
-//         </div>
-//       ) : (
-//         <p className="text-xl text-center text-gray-500">Your cart is empty</p>
-       
-//       )}
-//     </div>
-//   );
-// }
-
-// export default Cart;
-
-
-
-
-
-
-
-
-// "use client"
-// import React from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
-// import { removeItem, increaseQuantity, decreaseQuantity } from '@/app/(add to cart)/Redux/cartslice'; 
-// import Image from 'next/image';
-// import { FaTrashAlt } from 'react-icons/fa'; 
-
-// function Cart() {
-//   const cartitems = useSelector((state:any) => state.cart.items || []); 
-//   const dispatch = useDispatch(); 
-
-//   const handleRemove = (id: number) => {
-//     dispatch(removeItem(id));
-//   };
-
-//   const handleIncrease = (id: number) => {
-//     dispatch(increaseQuantity(id));
-//   };
-
-//   const handleDecrease = (id: number) => {
-//     dispatch(decreaseQuantity(id));
-//   };
-
-//   return (
-//     <div className="max-w-6xl mx-auto p-4">
-//       <h1 className="text-3xl font-semibold text-center mb-6">Your Cart</h1>
-
-     
-//       {cartitems.length === 0 && (
-//         <div className="flex justify-center mb-6">
-//           <Image 
-//             src="/cart.jpg" 
-//             alt="Cart" 
-//             height={300} 
-//             width={300} 
-//             className="object-contain" 
-//           />
-//         </div>
-//       )}
-      
-//       {cartitems.length > 0 ? (
-//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-//           {cartitems.map((item: any) => {
-//             const totalPrice = item.price * item.quantity; 
-//             return (
-//               <div key={item.id} className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-               
-//                 <div className="w-full h-60 flex justify-center items-center mb-4">
-//                   <Image className="object-contain max-h-full" src={item.image} alt={item.title} height={500} width={500} />
-//                 </div>
-
-             
-//                 <div className="text-center mb-4">
-//                   <h5 className="text-xl font-medium text-gray-800">{item.title}</h5>
-//                   <h5 className="text-lg text-gray-600">${item.price} x {item.quantity} = ${totalPrice}</h5>
-//                 </div>
-
-               
-//                 <div className="flex items-center mb-4">
-//                   <button
-//                     onClick={() => handleDecrease(item.id)}
-//                     className="px-3 py-1 bg-gray-300 text-black rounded-md hover:bg-gray-400 focus:outline-none"
-//                   >
-//                     -
-//                   </button>
-//                   <span className="mx-4 text-lg">{item.quantity}</span>
-//                   <button
-//                     onClick={() => handleIncrease(item.id)}
-//                     className="px-3 py-1 bg-gray-300 text-black rounded-md hover:bg-gray-400 focus:outline-none"
-//                   >
-//                     +
-//                   </button>
-//                 </div>
-
-              
-//                 <button 
-//                   onClick={() => handleRemove(item.id)} 
-//                   className="mt-4 px-6 py-2 bg-red-500 text-white rounded-full text-sm font-semibold hover:bg-red-700 focus:outline-none transition-all duration-200 flex items-center justify-center"
-//                 >
-//                   <FaTrashAlt className="mr-2" /> 
-//                 </button>
-//               </div>
-//             );
-//           })}
-//         </div>
-//       ) : (
-//         <p className="text-xl text-center text-gray-500">Your cart is empty</p>
-//       )}
-//     </div>
-//   );
-// }
-
-// export default Cart;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 "use client";
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { removeItem, increaseQuantity, decreaseQuantity } from '@/app/(add to cart)/Redux/cartslice'; 
-import Image from 'next/image';
-import { FaTrashAlt } from 'react-icons/fa';
-
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { removeItem, increaseQuantity, decreaseQuantity } from "@/app/(add to cart)/Redux/cartslice";
+import Image from "next/image";
+import { FaTrashAlt } from "react-icons/fa";
+import Link from "next/link";
 
 interface CartItem {
   id: number;
   title: string;
-  price: number;
+  price: string; // Keep price as string
   quantity: number;
+  size: string;
+  color: string;
   image: string;
 }
 
 function Cart() {
- 
-  const cartitems = useSelector((state: { cart: { items: CartItem[] } }) => state.cart.items || []); 
-  const dispatch = useDispatch(); 
+  const cartitems = useSelector((state: { cart: { items: CartItem[] } }) => state.cart.items || []);
+  const dispatch = useDispatch();
 
   const handleRemove = (id: number) => {
     dispatch(removeItem(id));
@@ -230,68 +33,131 @@ function Cart() {
     dispatch(decreaseQuantity(id));
   };
 
+  
+  const convertPriceToNumber = (price: string) => {
+    return parseFloat(price.replace(/[^0-9.-]+/g, '')); 
+  };
+
+  
+  const calculateSubtotal = () => {
+    return cartitems.reduce((total, item) => total + convertPriceToNumber(item.price) * item.quantity, 0);
+  };
+
+  
+  const calculateTotalPrice = (item: CartItem) => {
+    return convertPriceToNumber(item.price) * item.quantity;
+  };
+
   return (
-    <div className="max-w-6xl mx-auto p-4">
-      <h1 className="text-3xl font-semibold text-center mb-6">Your Cart</h1>
+    <div className="max-w-4xl mx-auto p-4">
+      <h1 className="text-2xl font-bold text-center mb-6">Your Cart</h1>
 
-      {cartitems.length === 0 && (
-        <div className="flex justify-center mb-6">
-          <Image 
-            src="/cart.jpg" 
-            alt="Cart" 
-            height={300} 
-            width={300} 
-            className="object-contain" 
-          />
-        </div>
-      )}
-      
-      {cartitems.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {cartitems.map((item) => {
-            const totalPrice = item.price * item.quantity; 
-            return (
-              <div key={item.id} className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="w-full h-60 flex justify-center items-center mb-4">
-                  <Image className="object-contain max-h-full" src={item.image} alt={item.title} height={500} width={500} />
-                </div>
-
-                <div className="text-center mb-4">
-                  <h5 className="text-xl font-medium text-gray-800">{item.title}</h5>
-                  <h5 className="text-lg text-gray-600">${item.price} x {item.quantity} = ${totalPrice}</h5>
-                </div>
-
-                <div className="flex items-center mb-4">
-                  <button
-                    onClick={() => handleDecrease(item.id)}
-                    className="px-3 py-1 bg-gray-300 text-black rounded-md hover:bg-gray-400 focus:outline-none"
-                  >
-                    -
-                  </button>
-                  <span className="mx-4 text-lg">{item.quantity}</span>
-                  <button
-                    onClick={() => handleIncrease(item.id)}
-                    className="px-3 py-1 bg-gray-300 text-black rounded-md hover:bg-gray-400 focus:outline-none"
-                  >
-                    +
-                  </button>
-                </div>
-
-                <button 
-                  onClick={() => handleRemove(item.id)} 
-                  className="mt-4 px-6 py-2 bg-red-500 text-white rounded-full text-sm font-semibold hover:bg-red-700 focus:outline-none transition-all duration-200 flex items-center justify-center"
-                >
-                  <FaTrashAlt className="mr-2" /> 
-                </button>
-              </div>
-            );
-          })}
+      {cartitems.length === 0 ? (
+        <div className="text-center">
+          <p className="text-xl text-gray-500">Your cart is empty</p>
         </div>
       ) : (
-        <p className="text-xl text-center text-gray-500">Your cart is empty</p>
+        <div>
+          <div className="space-y-6">
+            {cartitems.map((item) => {
+              const totalPrice = calculateTotalPrice(item); 
+              return (
+                <div key={item.id} className="flex justify-between items-center border-b pb-4">
+                  <Image src={item.image} alt={item.title} width={80} height={80} className="rounded" />
+                  <div className="flex-1 px-4">
+                    <h3 className="text-lg font-semibold">{item.title}</h3>
+                    <p className="text-sm text-gray-500">
+                      Size: {item.size}, Color: {item.color}
+                    </p>
+                    <p className="text-sm font-medium">
+                      ${convertPriceToNumber(item.price).toFixed(2)} x {item.quantity} = ${totalPrice.toFixed(2)}
+                    </p>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <button
+                      onClick={() => handleDecrease(item.id)}
+                      className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
+                    >
+                      -
+                    </button>
+                    <span className="text-lg">{item.quantity}</span>
+                    <button
+                      onClick={() => handleIncrease(item.id)}
+                      className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
+                    >
+                      +
+                    </button>
+                    <button
+                      onClick={() => handleRemove(item.id)}
+                      className="p-2 bg-red-500 text-white rounded hover:bg-red-600"
+                    >
+                      <FaTrashAlt />
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-6 bg-gray-100 p-4 rounded shadow">
+            <h2 className="text-lg font-semibold">Order Summary</h2>
+            <div className="flex justify-between mt-2">
+              <span>Subtotal</span>
+              <span>${calculateSubtotal().toFixed(2)}</span> 
+            </div>
+            <div className="flex justify-between mt-2">
+              <span>Discount (-20%)</span>
+              <span>-$0</span>
+            </div>
+            <div className="flex justify-between mt-2">
+              <span>Delivery Fee</span>
+              <span>$0</span>
+            </div>
+            <div className="flex justify-between mt-4 font-bold">
+              <span>Total</span>
+              <span>${calculateSubtotal().toFixed(2)}</span>
+            </div>
+            <div className="mt-4">
+              <input
+                type="text"
+                placeholder="Add promo code"
+                className="w-full px-3 py-2 border rounded mb-2"
+              />
+              <button className="w-full px-4 py-2 bg-black text-white rounded">Apply</button>
+            </div>
+          </div>
+          <button className="mt-4 w-full px-4 py-2 bg-black text-white rounded">
+            Go to Checkout
+          </button>
+        </div>
       )}
     </div>
   );
 }
 
 export default Cart;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
