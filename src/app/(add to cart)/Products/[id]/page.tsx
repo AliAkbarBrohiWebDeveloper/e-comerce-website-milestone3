@@ -369,7 +369,7 @@ const products: Iproducts[] = [
       {
         id: 36,
         image: "/h2.png",
-        price:"16",
+        price:"$16",
         header: "Nike Air Max Pulse", 
       description: "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its inside out-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. Details like the deco stitching on the Swoosh add coveted appeal, while the unexpected shading, rich mixture of materials and aged midsole aesthetic give this release an artisan finish.",
       button:"Add to Cart"
