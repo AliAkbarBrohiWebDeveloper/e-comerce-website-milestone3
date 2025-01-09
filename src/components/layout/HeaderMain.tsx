@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Link from 'next/link'
-import { BiCart, BiHeart, BiSearch,  } from 'react-icons/bi'
+import { BiHeart, BiSearch,  } from 'react-icons/bi'
 
 import Wrapper from '../shareable/Wrapper'
 import Image from 'next/image'

@@ -5,12 +5,7 @@ import React from 'react';
 import Wrapper from '../shareable/Wrapper';
 import Button from "@/components/shareable/Button"
 import Link from 'next/link';
-interface  Params {
-  params:{
-    id:number
-  }
 
-}
 const AirMax = [
   {
     id: 33,
