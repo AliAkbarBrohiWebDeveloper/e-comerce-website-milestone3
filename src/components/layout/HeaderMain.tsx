@@ -5,6 +5,8 @@ import { BiCart, BiHeart, BiSearch,  } from 'react-icons/bi'
 
 import Wrapper from '../shareable/Wrapper'
 import Image from 'next/image'
+import Navbar from './Navbar'
+
   
 
 const Headermain = () => {
@@ -16,7 +18,7 @@ const Headermain = () => {
 
 
         <div>
-<Image src={'/vector1.png'} alt='' height={50} width={100}/>
+<Image src={'/vector1.png'} alt='' height={78} width={78}/>
 
 
         </div>
@@ -28,7 +30,7 @@ const Headermain = () => {
               <Link href={'/'}>New & Featured</Link>
             </li>
             <li>
-              <Link href={'men'}>Men</Link>
+              <Link href={''}>Men</Link>
             </li>
             <li>
               <Link href={''}>Women</Link>
@@ -58,11 +60,13 @@ const Headermain = () => {
           <BiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-xl " />
         </div>
 <div>
-  <Link href={'/heart'}><BiHeart className='text-4xl font-bold'/></Link>
+  <Link href={''}><BiHeart className='text-4xl font-bold'/></Link>
 
 </div>
 <div>
-  <Link href={'/cart'}><BiCart className='text-3xl font-bold'/></Link>
+
+<Navbar/>
+ 
 
 
 </div>

@@ -32,8 +32,7 @@ const Miss = () => {
           backgroundImage: 'url(/m1.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          // height: '700px',
-          // width: '100%',
+         
         }}
       >
         

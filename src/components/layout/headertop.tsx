@@ -20,11 +20,11 @@ import { BiSearch } from 'react-icons/bi'
 const Headertop = () => {
   return (
     <Wrapper>
-    <header className='flex justify-between items-center gap-x-9'>
+    <header className='flex justify-between items-center gap-x-9 md:bg-[#F5F5F5] mt-3 h-[70px] '>
 
       <div>
 
-<Image src={'/c1.png'} alt='' height={50} width={50}/>
+<Image src={'/c1.png'} alt='' height={24} width={24} className=''/>
 
       </div>
 
@@ -34,7 +34,7 @@ const Headertop = () => {
 
 
 
-    <Link href={'products'}>Find a Store|</Link>
+    <Link href={'/Products'}>Find a Store|</Link>
 
 
 
@@ -75,7 +75,7 @@ const Headertop = () => {
 
 
 <Link href={'/'}>New & Featured</Link>
-    <Link href={'products'}>Find a Store|</Link>
+    <Link href={'/Products'}>Find a Store|</Link>
 
 
 
