@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { removeItem, increaseQuantity, decreaseQuantity } from "@/app/(add to cart)/Redux/cartslice";
 import Image from "next/image";
 import { FaTrashAlt } from "react-icons/fa";
-import Link from "next/link";
+
 
 interface CartItem {
   id: number;
