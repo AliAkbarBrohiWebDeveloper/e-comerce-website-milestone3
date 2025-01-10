@@ -14,13 +14,17 @@ import {
 } from "@/components/ui/sheet"
 import { Menu } from 'lucide-react'
 import { BiSearch } from 'react-icons/bi'
+import Navbar from './Navbar'
 
 
 
 const Headertop = () => {
   return (
+
+    <section className='sticky top-0 -z-0'>
     <Wrapper>
-    <header className='flex justify-between items-center gap-x-9 md:bg-[#F5F5F5] mt-3 h-[70px] '>
+     
+    <header className='flex justify-between items-center gap-x-9 md:bg-[#F5F5F5] mt-3 h-[50px]  '>
 
       <div>
 
@@ -46,11 +50,12 @@ const Headertop = () => {
 
 
     <Link href={'/sign'}>Sign In|</Link>
+    
 
   
 </div>
 
-<div className="relative w-64  md:hidden sm:block"> 
+<div className=" relative w-64  md:hidden sm:block ">
           <input 
             type="text" 
              
@@ -58,9 +63,14 @@ const Headertop = () => {
           />
           <BiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-xl " />
         </div>
+        <div className='md:hidden sm:block'>
+<Navbar/>
+
+        </div>
 
 
 <div>
+
 
 
 <Sheet>
@@ -87,18 +97,7 @@ const Headertop = () => {
 
 
     <Link href={'/sign'}>Sign In|</Link>
-              <Link href={'men'}>Men</Link>
-            
-            
-              <Link href={'women'}>Women</Link>
-          
-            
-              <Link href={'kids'}>Kids</Link>
-        
-        
-              <Link href={'/sales'}>Sales</Link>
-            
-              <Link href={'SNkRS'}>SNKRS</Link>
+              
             
 
 
@@ -115,7 +114,9 @@ const Headertop = () => {
 
 
     </header>
+   
     </Wrapper>
+    </section>
   )
 }
 

@@ -12,12 +12,13 @@ import Navbar from './Navbar'
 const Headermain = () => {
   
   return(
+   
     <Wrapper>
 
-      <header className="flex justify-between gap-x-9 items-center p-4">
+      <header className="flex justify-between gap-x-9 items-center p-4 mt-9">
 
 
-        <div>
+        <div className='hidden md:flex'>
 <Image src={'/vector1.png'} alt='' height={78} width={78}/>
 
 
@@ -46,12 +47,12 @@ const Headermain = () => {
             </li>
             
             
-            
-          
+        
+      
           </ul>
         </div>
 
-        <div className="relative w-64 hidden md:block"> 
+        <div className=" relative w-64 hidden md:flex"> 
           <input 
             type="text" 
              
@@ -63,13 +64,10 @@ const Headermain = () => {
   <Link href={''}><BiHeart className='text-4xl font-bold hidden md:flex'/></Link>
 
 </div>
-<div>
-
-<Navbar/>
- 
-
-
+<div className='hidden md:flex'>
+  <Navbar/>
 </div>
+
 <div>
 
 </div>
@@ -79,6 +77,7 @@ const Headermain = () => {
 
       </header>
       </Wrapper>
+   
     
   )
 }
